@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- names website tab -->
+        <title>My Portfolio</title> 
+        <!-- utf-8 character set covers almost all characters and symbols -->
+        <meta charset="utf-8">
+        <!-- sets the website as responsive. sets width to size of device -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- styling parts of the website -->
+        <style>
+            *{
+                /* not sure, what is the astrick for */
+                box-sizing: border-box;
+            }
+            body{
+                /* font size for body (idk what the body is) */
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            }
+            /* style for header */
+            header{
+                background-color: #666;
+                padding: 30px;
+                text-align: center;
+                font-size: 35px;
+                color: white;
+            }
+            /* two columns/boxes that float next to each other */
+            nav{
+                float: left;
+                width: 30%;
+                height: 300px; /* for demo, should be removed */
+                background: #ccc;
+                padding: 20px;
+            }
+            /* styles inside the menu (idk what the menu is)*/
+            nav ul{
+                list-style-type: none;
+                padding: 0;
+            }
+            /* what is article..? */
+            article {
+                float: left;
+                padding: 20px;
+                width: 70%;
+                background-color: #f1f1f1;
+                height: 300px; /*only for demo should be removed*/
+            }
+            /* clears floats after the columns */
+            section::after{
+                /* content is used with the ::before and::after to insert content */
+                content: "";
+                /* display allows you to insert text within a body of text */
+                display: table; /* idk what table does tho. but display: inline is like geronimo stilton books*/
+                /* clear: both means floating elements are not allowed to float on both sides */
+                clear: both;
+            }
+            /* style for footer */
+            footer{
+                background-color:#777;
+                padding: 10px; /* padding is distance from text */
+                text-align: center;
+                color: white;
+            }
+            /* RESPONISVE LAYOUT */
+            /* columns stack on top of each other when screen gets smaller*/
+            @media (max-width: 600px) { /* screen smaller than max-width will stack*/
+                nav, article {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+        </style>
+    </head>
+
+    <!-- this is where stuff is actually added -->
+
+    <body>
+        <h2>My Website Portfolio, layout float</h2>
+        <p>Hello. My name is Katelyn Fu. I am a freshman at Sunny Hills High School. 
+            This is the basic layout for my self-portfolio webisite. It is quite ugly, 
+            but I am just starting out. I cannot think of what to put here at the moment,
+        but I plan to put a picture here. Stay tuned.</p>
+
+        <header>
+            <h2>Column (for hobbies? needs picture and text overlay)</h2>
+        </header>
+
+        <section>
+            <nav>
+                <ul>
+                    <!-- what is li and a? -->
+                    <li><a href="#">linkToAnotherWebsite</a></li>
+                    <li><a href="#">linkToAnotherWebsite</a></li>
+                    <li><a href="#">linkToAnotherWebsite</a></li>
+                </ul>
+            </nav>
+
+            <article>
+                <h1>About Me</h1>
+                <p>hello. There is supposed to be a paragraph here. I am not sure what 
+                    to put yet. I like ice cream tho. :)</p>
+                <p>another paragraph ig (fonts can be changed)</p>
+            </article>
+        </section>
+
+        <footer>
+            <p>Footer</p>
+            <p> I think this is for contacts or something</p>
+        </footer>
+    </body>
+</html>
